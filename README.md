@@ -1,6 +1,6 @@
 # release it - update manifest plugin
 
-[![NPM](https://img.shields.io/npm/v/react-use-cancel-token.svg)](https://www.npmjs.com/package/release-it-update-manifest-plugin)
+[![NPM](https://img.shields.io/npm/v/release-it-update-manifest-plugin.svg)](https://www.npmjs.com/package/release-it-update-manifest-plugin)
 [![Downloads](https://img.shields.io/npm/dt/release-it-update-manifest-plugin.svg)](https://www.npmjs.com/package/release-it-update-manifest-plugin)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-green.svg)](https://standardjs.com)
 
@@ -9,7 +9,7 @@
 ## Install
 
 ```bash
-npm i release-it-update-manifest-plugin
+npm i -D release-it-update-manifest-plugin
 ```
 
 ## Usage
@@ -18,7 +18,7 @@ Simply add the plugin to your `.release-it.json` file:
 
 ```json
 {
-  ...,
+  // ...
   "plugins": {
     "release-it-update-manifest-plugin": {
       "preset": "react"
