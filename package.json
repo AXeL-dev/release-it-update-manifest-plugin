@@ -1,0 +1,40 @@
+{
+  "name": "@release-it/update-manifest-plugin",
+  "version": "1.0.0",
+  "description": "A plugin to update manifest file(s) version on release",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "keywords": [
+    "release",
+    "release-it",
+    "release-it-plugin",
+    "plugin",
+    "manifest",
+    "webext",
+    "bump"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AXeL-dev/release-it-update-manifest-plugin.git"
+  },
+  "homepage": "https://github.com/AXeL-dev/release-it-update-manifest-plugin#readme",
+  "bugs": "https://github.com/AXeL-dev/release-it-update-manifest-plugin/issues",
+  "author": {
+    "name": "AXeL-dev",
+    "email": "contact.axel.dev@gmail.com",
+    "url": "https://axel-dev.github.io"
+  },
+  "peerDpendencies": {
+    "release-it": "^15.5.0"
+  },
+  "devDependencies": {
+    "release-it": "^15.5.0"
+  },
+  "dependencies": {
+    "glob": "^7.1.7"
+  }
+}
