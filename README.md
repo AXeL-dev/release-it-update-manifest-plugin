@@ -16,22 +16,23 @@ npm i -D release-it-update-manifest-plugin
 
 Simply add the plugin to your `.release-it.json` file:
 
-```json
-{
-  // ...
-  "plugins": {
-    "release-it-update-manifest-plugin": {
-      "preset": "react"
+```diff
+  {
+    ...
+    "plugins": {
++     "release-it-update-manifest-plugin": {
++        "preset": "react"
++      }
     }
   }
-}
 ```
 
 ## Options
 
-| Option   | Default value | Description                                                   |
-| -------- | ------------- | ------------------------------------------------------------- |
-| `preset` | `react`       | Default plugin preset. Possible values: `react` or `angular`. |
+| Option    | Default value | Description                                                                |
+| --------- | ------------- | -------------------------------------------------------------------------- |
+| `preset`  | `react`       | Default plugin preset. Possible values: `react` or `angular`.              |
+| `pattern` | ``            | Glob module pattern. Can be used when none of the presets fits your needs. |
 
 ## License
 

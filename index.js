@@ -5,9 +5,10 @@ import glob from 'glob';
 class UpdateManifestPlugin extends Plugin {
   async init() {
     await super.init();
-    const { preset } = this.options;
+    const { preset, pattern } = this.options;
 
     this.preset = preset || 'react';
+    this.pattern = pattern || '';
   }
 
   getLatestVersion() {
@@ -15,8 +16,11 @@ class UpdateManifestPlugin extends Plugin {
     return json.version;
   }
 
-  getPattern(preset) {
-    switch (preset) {
+  getPattern() {
+    if (this.pattern) {
+      return this.pattern;
+    }
+    switch (this.preset) {
       case 'angular':
         return './src/manifest*.json';
       case 'react':
@@ -26,7 +30,7 @@ class UpdateManifestPlugin extends Plugin {
   }
 
   bump(version) {
-    const pattern = this.getPattern(this.preset);
+    const pattern = this.getPattern();
     glob.sync(pattern).forEach((file) => {
       const content = fs.readFileSync(file, 'utf8');
       const newContent = content.replace(
